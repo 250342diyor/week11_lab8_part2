@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+bool isPalindrome(string s) {
+    char org[s.length()];
+    char rev[s.length()];
+    for (int i = 0; i < s.length(); i++) {
+        org[i] = s[i];
+        rev[i] = s[s.length()-1-i];
+    }
+    for (int i = 0; i < s.length(); i++) {
+        if (org[i] != rev[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+int main() {
+    string s;
+    cout << "Please enter a string: ";
+    cin >> s;
+    if (isPalindrome(s)) {
+        cout << "true";
+    }else {
+        cout << "false";
+    }
+}
