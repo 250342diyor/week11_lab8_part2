@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int countChar(const string&s,char a) {
+    int count=0;
+    for(int i=0;i<s.length();i++) {
+        if(s[i]==a) {
+            count++;
+        }
+    }
+    return count;
+}
+int main() {
+    string s;
+    char a;
+    cout<<"Enter string:";
+    cin>>s;
+    cout<<"Enter character:";
+    cin>>a;
+    cout<<countChar(s,a);
+}
