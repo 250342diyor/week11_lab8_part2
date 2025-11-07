@@ -1,0 +1,23 @@
+void search(string& s, char& key) {
+    bool b=false;
+    for (unsigned int i = 0; i < s.length(); i++) {
+        if (s[i] == key) {
+            b = true;
+            break;
+        }
+    }
+    if (b) {
+        cout << "Found" << endl;
+    }else {
+        cout << "Not Found" << endl;
+    }
+}
+int main() {
+    string s;
+    char key;
+    cout<<"Enter character: ";
+    cin>>key;
+    cout << "Enter string: ";
+    cin >> s;
+    search(s, key);
+}
