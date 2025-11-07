@@ -1,3 +1,5 @@
+#include <iostream>
+using namespace std;
 void search(string& s, char& key) {
     bool b=false;
     for (unsigned int i = 0; i < s.length(); i++) {
